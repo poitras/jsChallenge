@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jsChallenge</title>
+</head>
+<body>
+  
+  <script>
+    /**
+     * 1. Write a JavaScript program to display the current day and time in the following format.  Go to the editor
+     * Sample Output : Today is : Friday. 
+     * Current time is : 4 PM : 50 : 22
+     */
+    var date = new Date();
+    var day = date.getDay();
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var second = date.getSeconds();
+    var pmam;
+    if (hour > 12) {
+      pmam = 'PM';
+    } else {
+      pmam = 'AM'
+    }
+    switch (day) {
+      case 0:
+        day = 'Sunday';    
+        break;
+      case 1:
+        day = 'Monday';    
+        break;
+      case 2:
+        day = 'Tuesday';    
+        break;
+      case 3:
+        day = 'Wednesday';    
+        break;
+      case 4:
+        day = 'Thursday';    
+        break;
+      case 5:
+        day = 'Friday';    
+        break;
+      case 6:
+        day = 'Saturday';    
+        break;
+      default:
+        day = 'There was a error with the day'
+        break;
+    }
+    console.log('Today is:', day);
+    console.log('Current Time is :', `${hour} ${pmam} : ${min} : ${second}`);
+    
+    
+    
+    
+    
+  </script>
+</body>
+</html>
